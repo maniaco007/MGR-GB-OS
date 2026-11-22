@@ -4,13 +4,6 @@
 
 Este projeto usa e distribui trabalho de outras pessoas. Esta página diz **o que é, de onde vem e em que pé está a licença**. Onde a licença não está confirmada, está escrito.
 
-### O menu: derivado do GBOS da Krikzz
-
-| Componente | Origem | Situação |
-|---|---|---|
-| **GBOS** (sistema do EverDrive GB) e módulo `GBXOS.BIN` | Igor Golubovskiy (**Krikzz**) — [krikzz.com](https://krikzz.com) | O **MGR-GB OS** que o aplicativo traz e grava no cartão é o GBOS com mudanças nossas (tradução, acentos, capas, prévia na lista, cheats, temas). **É código derivado, distribuído sem autorização escrita do autor.** A decisão de distribuir foi do dono deste projeto (Maniaco Game Room). Os direitos do código original continuam com a Krikzz, e **este projeto não é afiliado a ela** |
-| Hardware **EverDrive GB Extreme** (placa EXTREME REV.E) | Fabricante do cartucho | Só é citado como o aparelho em que o projeto foi testado; nenhum código ou arte dele é distribuído |
-
 ### Que o programa baixa (nunca distribuídos aqui)
 
 | Dado | Origem | Situação |
@@ -39,13 +32,6 @@ As telas do menu foram geradas no emulador do próprio projeto e mostram jogos d
 ## English
 
 This project uses and distributes other people's work. This page says **what it is, where it comes from and where the license stands**. Where a license is not confirmed, it says so.
-
-### The menu: derived from Krikzz's GBOS
-
-| Component | Source | Status |
-|---|---|---|
-| **GBOS** (the EverDrive GB system) and the `GBXOS.BIN` module | Igor Golubovskiy (**Krikzz**) — [krikzz.com](https://krikzz.com) | The **MGR-GB OS** that the app carries and writes to the card is GBOS with our changes (translation, accents, covers, list preview, cheats, themes). **It is derived code, distributed without the author's written permission.** The decision to distribute was made by the owner of this project (Maniaco Game Room). The rights to the original code remain with Krikzz, and **this project is not affiliated with them** |
-| **EverDrive GB Extreme** hardware (EXTREME REV.E board) | The cartridge's maker | Only named as the device the project was tested on; none of its code or art is distributed |
 
 ### What the program downloads (never distributed here)
 
