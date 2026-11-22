@@ -112,7 +112,7 @@ The menu **does not sort**: it lists files in the order of the entries in the ca
 
 The root shows the **Game Boy** and **Game Boy Color** folders, with the console image and the game count. **B** opens the folder.
 
-![List with the preview](imagens/menu-lista-capa.png)
+![List with the preview (photo of the Game Boy Color)](imagens/menu-lista-capa-console.jpg)
 
 - **Up and down:** pick the game. When you stop on a game, the **preview** shows on the right: small cover, ROM size, **Bateria** (battery) or "S/ save", **RTC** and **SGB** marks, and the number of **Cheats** (amber; a dim "Sem cheats" when there are none).
 - **Left and right:** change page.

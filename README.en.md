@@ -6,7 +6,9 @@
 
 A project of the **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** blog.
 
-![Game list with the cover preview](imagens/menu-lista-capa.png)
+![Game list with the cover preview, on a real Game Boy Color](imagens/menu-lista-capa-console.jpg)
+
+*The game list on a Game Boy Color, with the EverDrive GB Extreme.*
 
 > **Tested on real hardware:** a Game Boy Color with the **EverDrive GB Extreme** cartridge (EXTREME REV.E board, microSD in FAT32). See [What was tested](#what-was-tested).
 
@@ -85,7 +87,7 @@ Full step by step, with every screen: **[Manual](MANUAL.en.md)**.
 | Themes edited in the app, cheats applied when the game starts, covers converted by the improved converter | **Emulator only** (the project's own); awaiting a check on the console |
 | Plain Game Boy (DMG), other EverDrive GB models | Not tested |
 
-The screenshots in this repository were generated in the **project's own emulator** (which runs the real menu), with ROMs cut down just for the list; they are not photos of the console.
+The photo of the game list (at the top) is from the **real console**. The other screens were generated in the **project's own emulator** (which runs the real menu), with ROMs cut down just for the list; they are not photos of the console.
 
 ## Notice
 

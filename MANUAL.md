@@ -112,7 +112,7 @@ O menu **não ordena**: ele lista os arquivos na ordem das entradas do diretóri
 
 Na raiz aparecem as pastas **Game Boy** e **Game Boy Color**, com a imagem do console e a contagem de jogos. **B** abre a pasta.
 
-![Lista com a prévia](imagens/menu-lista-capa.png)
+![Lista com a prévia (foto do Game Boy Color)](imagens/menu-lista-capa-console.jpg)
 
 - **Cima e baixo:** escolhem o jogo. Ao parar num jogo, a **prévia** aparece à direita: capa pequena, tamanho da ROM, **Bateria** ou "S/ save", marcas **RTC** e **SGB**, e a quantidade de **Cheats** (em âmbar; "Sem cheats" apagado quando não há).
 - **Esquerda e direita:** mudam de página.

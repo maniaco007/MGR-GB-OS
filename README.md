@@ -6,7 +6,9 @@
 
 Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
-![Lista de jogos com a prévia da capa](imagens/menu-lista-capa.png)
+![Lista de jogos com a prévia da capa, no Game Boy Color real](imagens/menu-lista-capa-console.jpg)
+
+*A lista de jogos no Game Boy Color, com o EverDrive GB Extreme.*
 
 > **Testado em hardware real:** Game Boy Color com o cartucho **EverDrive GB Extreme** (placa EXTREME REV.E, microSD em FAT32). Veja [O que foi testado](#o-que-foi-testado).
 
@@ -85,7 +87,7 @@ Passo a passo completo, com todas as telas: **[Manual](MANUAL.md)**.
 | Temas editados pelo aplicativo, aplicação dos cheats ao iniciar o jogo, capas convertidas pelo conversor melhorado | **Só no emulador** do projeto; aguardando conferência no console |
 | Game Boy sem cores (DMG), outros modelos de EverDrive GB | Não testado |
 
-As telas deste repositório foram geradas no **emulador do próprio projeto** (que roda o menu real), com ROMs reduzidas só para a lista, e não são fotos do console.
+A foto da lista de jogos (no topo) é do **console real**. As demais telas foram geradas no **emulador do próprio projeto** (que roda o menu real), com ROMs reduzidas só para a lista, e não são fotos do console.
 
 ## Aviso
 
