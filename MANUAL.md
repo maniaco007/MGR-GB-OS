@@ -24,11 +24,11 @@ Abra **`MGR-GB-OS-Gerenciador.exe`** (um arquivo só, não precisa instalar). O 
 1. Em **Pasta das ROMs**, clique em **Procurar…** e escolha a pasta (a mesma pode servir aos dois consoles: o programa separa pelo cabeçalho de cada ROM). **Adicionar ROMs…** acrescenta arquivos soltos.
 2. Clique em **Ler pasta e preparar**. O programa:
    - identifica cada jogo pelo **conteúdo** (CRC32 contra o banco No-Intro), inclusive ROMs dentro de `.zip`;
-   - escolhe as **boas cópias** (uma por jogo, na região preferida);
+   - mantém **pastas e nomes originais**, inclusive revisões e cópias idênticas em caminhos diferentes (modo padrão); a seleção por região/revisão fica nos outros modos de organização;
    - baixa a **capa** (caixa, senão tela de título, senão captura) e os **cheats** pelo nome oficial.
 3. A tabela mostra, por jogo: se está **incluído**, o **nome no cartão**, o nome oficial, a região, o tamanho, se foi reconhecido no No-Intro, se tem capa e quantos cheats. Use **Buscar** e o filtro (incluídos, excluídos, sem capa, sem cheats, fora do No-Intro). Clique duas vezes numa linha para incluir ou tirar o jogo da gravação.
 4. No painel da direita, para o jogo selecionado:
-   - **Nome no cartão:** o que a lista do console vai mostrar; **Aplicar** grava a mudança.
+   - **Nome no cartão:** o que a lista do console vai mostrar; **Aplicar** grava a mudança nos modos de organização; na preservação vale o nome original do arquivo.
    - **Capa:** **Enviar capa…** (arquivo), **Colar (Ctrl+V)**, **Escolher outra…** ou **Tirar capa**.
    - **Cheats:** **Enviar…** o seu `.cht`, **Buscar…** de novo ou **Ver…** e tirar códigos.
    - **Incluir / tirar do cartão.**
@@ -40,7 +40,11 @@ A página **Game Boy Color** é igual, para os jogos `.gbc`. **Arquivo > Salvar 
 
 ### Cartão que já tem jogos
 
-Se o cartão já está cheio, use **Ler jogos do cartão** (nas páginas Game Boy e Game Boy Color). O programa lê as ROMs de **todas as pastas da raiz** (menos `EDGB`, `COVERS` e `CHEATS`; `.zip` não), separa Game Boy e Game Boy Color pelo cabeçalho, **mantém cada jogo onde está e sem renomear**, e baixa as capas e os cheats. Depois, **Gravar no cartão** só acrescenta capas, cheats, a prévia e o menu. As pastas com nome próprio também ganham a imagem do console e entram na ordem alfabética. Numa biblioteca grande a primeira conversão das capas demora (milhares de capas levam cerca de uma hora no conversor melhorado; o conversor **Padrão** é bem mais rápido).
+Se o cartão já está cheio, use **Ler jogos do cartão** (nas páginas Game Boy e Game Boy Color). O programa lê as ROMs de **todas as pastas e subpastas**, inclusive árvores como `Roms/Game Boy/GB US/` (menos `EDGB`, `COVERS` e `CHEATS`; `.zip` não), separa Game Boy e Game Boy Color pelo cabeçalho, **mantém cada jogo onde está e sem renomear**, e baixa as capas e os cheats. Depois, **Gravar no cartão** só acrescenta capas, cheats, a prévia e o menu. As subpastas também ganham a imagem do console e a contagem dos jogos descendentes. A reordenação das pastas é opcional e começa desligada. Numa biblioteca grande a primeira conversão das capas demora (milhares de capas levam cerca de uma hora no conversor melhorado; o conversor **Padrão** é bem mais rápido).
+
+### Atualizando para a 1.0.1
+
+Escolha a **raiz do cartão**, use **Ler jogos do cartão** e mantenha **Instalar / atualizar o MGR-GB OS ao gravar no cartão** marcado. Grave o plano para preparar o OS e os índices das pastas juntos; trocar só `GBOS.GB` não basta. Entradas antigas dos Recentes sem chave abrem sem extras; abrir o jogo pela pasta registra a chave nova.
 
 ### Escolher outra capa
 
@@ -67,7 +71,7 @@ Para voltar a uma versão do menu, renomeie o arquivo desejado (`GBOS_ORIG.BAK` 
 ![Página Gravar no cartão](imagens/app-gravar.png)
 
 1. Escolha o cartão e o **conversor das capas**: **Melhorado** (padrão) ou **Padrão**.
-2. Marque, se quiser, *Substituir capas e cheats que já estão no cartão* (a versão antiga vai para o backup) e *Deixar as pastas de jogos em ordem alfabética depois de gravar* (ligado por padrão).
+2. Marque, se quiser, *Substituir capas e cheats que já estão no cartão* (a versão antiga vai para o backup) e *Deixar as pastas de jogos em ordem alfabética depois de gravar* (desligado por padrão para preservar a estrutura existente).
 3. Clique em **Gravar no cartão…**. O programa converte as capas (o rodapé mostra quantas foram e **quanto falta**, refeito pelo ritmo real), monta o **plano** e mostra a tabela com cada arquivo: tipo, ação (novo, atualizar, igual…), caminho no cartão e tamanho.
 4. Confirme com **Sim**. Só então o programa grava.
 
@@ -75,10 +79,11 @@ Para voltar a uma versão do menu, renomeie o arquivo desejado (`GBOS_ORIG.BAK` 
 
 | No cartão | O quê |
 |---|---|
-| `Game Boy\` e `Game Boy Color\` | as ROMs escolhidas, com o título como nome do arquivo. Subpastas só se passar de **700 jogos** numa pasta |
-| `COVERS\<chave>.CVR` | a capa grande colorida (~8,7 KB). A chave vem do cabeçalho da ROM, não do nome |
+| Caminhos originais da coleção | ROMs nos caminhos originais no modo de preservação. Outros modos podem organizar em `Game Boy\` e `Game Boy Color\` |
+| `COVERS\<chave>.CVR` | a capa grande colorida. O app atribui a chave pelo conteúdo da ROM; originais e hacks com o mesmo cabeçalho ficam separados |
 | `CHEATS\<chave>.TXT` | cheats Game Genie (até 28 por jogo) |
-| `EDGB\PREVIEW.PCK` | a prévia da lista (capa pequena, tamanho, bateria, RTC/SGB e cheats); as pastas dos consoles na raiz recebem a imagem do console e a contagem |
+| `MGRPREV.PCK` em cada pasta de jogos e suas pastas superiores | prévia da lista, nomes completos e chaves dos extras; 2 MiB por pasta indexada, aceita fragmentação |
+| `EDGB\MGR\ASSETS.JSON` e `EDGB\COUNTS.BIN` | chaves persistentes por conteúdo e contagens de todas as subpastas |
 | `EDGB\GBOS.GB` e `EDGB\GBXOS.BIN` | o menu MGR-GB OS e o módulo dele |
 | `EDGB\SAVE\` e `EDGB\SETUP.BIN` | o que o menu precisa num cartão novo (pasta dos saves; tema e recentes), criados só se faltarem |
 | `EDGB\GBOS_ORIG.BAK` | o GBOS original, se você o tiver |
@@ -88,7 +93,7 @@ Para voltar a uma versão do menu, renomeie o arquivo desejado (`GBOS_ORIG.BAK` 
 
 - **Nada é apagado do cartão.** O programa só acrescenta e atualiza.
 - Tudo o que for substituído vai antes para `EDGB\MGR\BACKUP\<data>`. Cada arquivo é gravado num temporário, forçado para o disco, trocado e **conferido depois**.
-- **ROM nunca é sobrescrita:** se o nome já existe com outro conteúdo, a nova vai como `Nome (2).gb`. ROM que já está no cartão não é copiada de novo.
+- **ROM nunca é sobrescrita:** a preservação interrompe o plano se o destino original tiver outro conteúdo. Nos outros modos, usa um nome como `Nome (2).gb`. ROM que já está no cartão não é copiada de novo.
 - Capas e cheats que já estão no cartão **ficam como estão**, a não ser que você peça para substituir.
 - O menu (`GBXOS.BIN` e `GBOS.GB`) é o **último passo**; se o segundo arquivo falhar, o primeiro volta ao que era.
 - Antes de gravar, o programa confere: cartão **FAT32**, espaço livre e se a unidade é removível (disco fixo pede confirmação). Um cartão novo e vazio é normal: o programa cria sozinho o que o EverDrive precisa.
@@ -110,7 +115,7 @@ O menu **não ordena**: ele lista os arquivos na ordem das entradas do diretóri
 
 ![Pastas dos consoles](imagens/menu-pastas.png)
 
-Na raiz aparecem as pastas **Game Boy** e **Game Boy Color**, com a imagem do console e a contagem de jogos. **B** abre a pasta.
+Na raiz aparecem as pastas originais da coleção (ou **Game Boy** e **Game Boy Color** nos modos de organização), com a imagem do console e a contagem de jogos. **B** abre a pasta.
 
 ![Lista com a prévia (foto do Game Boy Color)](imagens/menu-lista-capa-console.jpg)
 
@@ -160,14 +165,14 @@ Cada linha traz um código Game Genie com a sua descrição. **B** liga ou desli
 - **Só Game Genie** (`XXX-XXX` ou `XXX-XXX-XXX`), uma entrada = um código. GameShark e combinações com `+` ficam de fora. O menu procura o banco de memória pelo byte de comparação, então só entram códigos de 9 dígitos que batem com a ROM (ou de 6 dígitos no banco 0).
 - O casamento aproximado de nome (marcado "aproximada") pode errar: confira. Converter um cheat não prova que funciona naquela versão do jogo.
 - Aceita `.gb`, `.gbc` e `.sgb` (soltos ou em `.zip`) até 8 MiB.
-- Acima de **~780 entradas numa pasta** o menu deixa de mostrar a prévia; por isso o programa cria subpastas passando de 700 jogos.
-- O `PREVIEW.PCK` tem 2.064 vagas; jogo sem vaga fica sem prévia (aparece no aviso).
-- O `PREVIEW.PCK` precisa ficar **contíguo** no cartão. O programa reserva o tamanho antes de gravar, mas o Windows só deixa conferir a disposição como administrador; se a prévia não aparecer, copie os arquivos para um cartão recém-formatado (FAT32).
+- Acima de **~780 entradas numa pasta** o menu deixa de mostrar a prévia; o modo de organização automática cria subpastas passando de 700 jogos. A preservação não divide as pastas existentes.
+- Cada pasta tem seu `MGRPREV.PCK` (2.048 vagas no índice). Não há uma única tabela de prévias para a coleção inteira. O OS segue a cadeia FAT, inclusive em índices fragmentados.
+
 - Num Game Boy sem cores, a tela de capa é ignorada.
 
 ## 9. Problemas comuns
 
-- **A prévia não aparece na lista:** veja o limite do `PREVIEW.PCK` acima; confira se a pasta tem menos de ~780 entradas.
+- **A prévia não aparece na lista:** prepare o cartão pelo app 1.0.1 com a atualização do OS habilitada; confira se a pasta tem menos de ~780 entradas.
 - **Jogo fora da ordem alfabética:** use **Reordenar pastas…**.
 - **Quero voltar ao menu original:** renomeie o `GBOS_ORIG.BAK` para `GBOS.GB`.
 - **O cartão ficou estranho depois de tirá-lo:** use sempre **Remover com segurança**; o cartão do projeto já corrompeu duas vezes sem isso. Se repetir, troque o cartão.

@@ -24,11 +24,11 @@ Open **`MGR-GB-OS-Gerenciador.exe`** (a single file, no installation). The top m
 1. Under **ROM folder**, click **Browse…** and pick the folder (the same one can serve both consoles: the program splits them by each ROM's header). **Add ROMs…** adds loose files.
 2. Click **Read folder and prepare**. The program:
    - identifies each game by **content** (CRC32 against the No-Intro database), including ROMs inside `.zip` files;
-   - picks the **good copies** (one per game, in the preferred region);
+   - keeps **original folders and names**, including revisions and identical copies at different paths (default mode); region/revision selection is available in the other organization modes;
    - downloads the **cover** (box art, else title screen, else snapshot) and the **cheats** by official name.
 3. The table shows, per game: whether it is **included**, the **name on the card**, the official name, the region, the size, whether No-Intro recognized it, whether it has a cover and how many cheats. Use **Search** and the filter (included, excluded, no cover, no cheats, not in No-Intro). Double-click a row to include or leave out the game.
 4. In the right-hand panel, for the selected game:
-   - **Name on the card:** what the console list will show; **Apply** saves the change.
+   - **Name on the card:** what the console list will show; **Apply** saves the change in the organization modes; preservation keeps the original file name.
    - **Cover:** **Upload cover…** (file), **Paste (Ctrl+V)**, **Choose another…** or **Remove cover**.
    - **Cheats:** **Upload…** your own `.cht`, **Search…** again or **View…** and remove codes.
    - **Include / leave out of the card.**
@@ -40,7 +40,11 @@ The **Game Boy Color** page is the same, for `.gbc` games. **File > Save project
 
 ### A card that already has games
 
-If the card is already full, use **Read games from the card** (on the Game Boy and Game Boy Color pages). The program reads the ROMs of **every root folder** (except `EDGB`, `COVERS` and `CHEATS`; not `.zip`), splits Game Boy and Game Boy Color by the header, **keeps each game where it is, unrenamed**, and downloads covers and cheats. Then **Write to the card** only adds covers, cheats, the preview and the menu. Folders with their own names also get the console image and go into alphabetical order. On a large library the first cover conversion takes a while (thousands of covers take about an hour with the improved converter; the **Standard** converter is much faster).
+If the card is already full, use **Read games from the card** (on the Game Boy and Game Boy Color pages). The program reads the ROMs of **all folders and subfolders**, including trees such as `Roms/Game Boy/GB US/` (except `EDGB`, `COVERS` and `CHEATS`; not `.zip`), splits Game Boy and Game Boy Color by the header, **keeps each game where it is, unrenamed**, and downloads covers and cheats. Then **Write to the card** only adds covers, cheats, the preview and the menu. Subfolders also get the console image and descendant game count. Folder reordering is optional and disabled by default. On a large library the first cover conversion takes a while (thousands of covers take about an hour with the improved converter; the **Standard** converter is much faster).
+
+### Updating to 1.0.1
+
+Pick the **card root**, use **Read games from the card** and keep **Install / update MGR-GB OS when writing to the card** enabled. Write the plan to prepare the OS and folder indexes together; replacing only `GBOS.GB` is not enough. Old Recent entries without an asset key start without extras; opening the game from its folder records the new key.
 
 ### Choose another cover
 
@@ -67,7 +71,7 @@ To go back to a menu version, rename the file you want (`GBOS_ORIG.BAK` or a cop
 ![Write to the card page](imagens/app-gravar-en.png)
 
 1. Pick the card and the **cover converter**: **Improved** (default) or **Standard**.
-2. Optionally tick *Replace covers and cheats already on the card* (the old version goes to the backup) and *Put the game folders in alphabetical order after writing* (on by default).
+2. Optionally tick *Replace covers and cheats already on the card* (the old version goes to the backup) and *Put the game folders in alphabetical order after writing* (disabled by default to preserve the existing layout).
 3. Click **Write to the card…**. The program converts the covers (the footer shows how many are done and **how much is left**, recomputed from the real pace), builds the **plan** and shows the table with every file: type, action (new, update, same…), path on the card and size.
 4. Confirm with **Yes**. Only then does the program write.
 
@@ -75,10 +79,11 @@ To go back to a menu version, rename the file you want (`GBOS_ORIG.BAK` or a cop
 
 | On the card | What |
 |---|---|
-| `Game Boy\` and `Game Boy Color\` | the chosen ROMs, with the title as the file name. Subfolders only above **700 games** in one folder |
-| `COVERS\<key>.CVR` | the large color cover (~8.7 KB). The key comes from the ROM header, not the name |
+| Original collection paths | ROMs at their original paths in preservation mode. Other modes can organize `Game Boy\` and `Game Boy Color\` |
+| `COVERS\<key>.CVR` | the large color cover. The app assigns a key per ROM content; originals and hacks with the same header remain separate |
 | `CHEATS\<key>.TXT` | Game Genie cheats (up to 28 per game) |
-| `EDGB\PREVIEW.PCK` | the list preview (small cover, size, battery, RTC/SGB and cheats); the console folders at the root get the console image and the count |
+| `MGRPREV.PCK` in each game folder and its parents | list preview, complete file names and asset keys; 2 MiB per indexed folder, supports fragmentation |
+| `EDGB\MGR\ASSETS.JSON` and `EDGB\COUNTS.BIN` | persistent content keys and counts across all subfolders |
 | `EDGB\GBOS.GB` and `EDGB\GBXOS.BIN` | the MGR-GB OS menu and its module |
 | `EDGB\SAVE\` and `EDGB\SETUP.BIN` | what the menu needs on a new card (the saves folder; theme and recents), created only if missing |
 | `EDGB\GBOS_ORIG.BAK` | the original GBOS, if you have it |
@@ -88,7 +93,7 @@ To go back to a menu version, rename the file you want (`GBOS_ORIG.BAK` or a cop
 
 - **Nothing is deleted from the card.** The program only adds and updates.
 - Anything replaced goes first to `EDGB\MGR\BACKUP\<date>`. Each file is written to a temporary file, flushed to disk, swapped in and **verified afterwards**.
-- **A ROM is never overwritten:** if the name already exists with other content, the new one goes as `Name (2).gb`. A ROM already on the card is not copied again.
+- **A ROM is never overwritten:** preservation stops the plan if the original destination has different content. In the other modes, it uses a name such as `Name (2).gb`. A ROM already on the card is not copied again.
 - Covers and cheats already on the card **stay as they are**, unless you ask to replace them.
 - The menu (`GBXOS.BIN` and `GBOS.GB`) is the **last step**; if the second file fails, the first goes back to what it was.
 - Before writing the program checks: **FAT32** card, free space and whether the drive is removable (a fixed disk asks for confirmation). A new, empty card is normal: the program creates by itself what the EverDrive needs.
@@ -110,7 +115,7 @@ The menu **does not sort**: it lists files in the order of the entries in the ca
 
 ![Console folders](imagens/menu-pastas.png)
 
-The root shows the **Game Boy** and **Game Boy Color** folders, with the console image and the game count. **B** opens the folder.
+The root shows the collection's original folders (or **Game Boy** and **Game Boy Color** in the organization modes), with the console image and the game count. **B** opens the folder.
 
 ![List with the preview (photo of the Game Boy Color)](imagens/menu-lista-capa-console.jpg)
 
@@ -160,14 +165,14 @@ Each line has a Game Genie code with its description. **B** toggles the cheat (`
 - **Game Genie only** (`XXX-XXX` or `XXX-XXX-XXX`), one entry = one code. GameShark and `+` combinations are left out. The menu finds the memory bank by the compare byte, so only 9-digit codes that match the ROM (or 6-digit ones in bank 0) are included.
 - Approximate name matching (marked "approximate") can be wrong: check it. Converting a cheat does not prove it works on that game version.
 - Accepts `.gb`, `.gbc` and `.sgb` (loose or in `.zip`) up to 8 MiB.
-- Above **~780 entries in one folder** the menu stops showing the preview; that is why the program creates subfolders above 700 games.
-- `PREVIEW.PCK` has 2,064 slots; a game with no slot has no preview (it appears in the warning).
-- `PREVIEW.PCK` must be **contiguous** on the card. The program reserves its size before writing, but Windows only lets an administrator check the layout; if the preview does not show, copy the files to a freshly formatted (FAT32) card.
+- Above **~780 entries in one folder** the menu stops showing the preview; the automatic organization mode creates subfolders above 700 games. Preservation does not split existing folders.
+- Each folder has its own `MGRPREV.PCK` (2,048 index slots). There is no single preview table shared by the whole collection. The OS follows the FAT chain, including fragmented indexes.
+
 - On a plain Game Boy the cover screen is ignored.
 
 ## 9. Common problems
 
-- **The preview does not show in the list:** see the `PREVIEW.PCK` limit above; check that the folder has fewer than ~780 entries.
+- **The preview does not show in the list:** prepare the card using the 1.0.1 app with the OS update enabled; check that the folder has fewer than ~780 entries.
 - **A game is out of alphabetical order:** use **Reorder folders…**.
 - **I want the original menu back:** rename `GBOS_ORIG.BAK` to `GBOS.GB`.
 - **The card acted strange after I pulled it out:** always use **Safely remove**; the project's card has corrupted twice without it. If it repeats, replace the card.

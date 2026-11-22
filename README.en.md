@@ -16,6 +16,17 @@ A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
 *The cartridge used in the tests.*
 
+## New in 1.0.1
+
+- **Folders and subfolders preserved:** reads collections such as `Roms/Game Boy/GB US/` and keeps names, revisions and every copy at their original paths. A mixed source fills the GB and GBC pages in one pass.
+- **Covers and cheats for the correct version:** different contents, such as an original and a hack sharing a header, receive separate keys. Each folder's preview uses the complete file name.
+- **Large collections:** folder indexes, reads that follow fragmented card files, and cover/cheat lookup beyond the first 1,024 entries. Device Info counts games in all subfolders; Recent keeps the correct asset key.
+- **Preservation by default:** the initial mode is **Keep original folders and names**; reordering is optional. Cheats without available cover art get the console image to open the code screen.
+
+**Updating an existing card:** pick the card root, click **Read games from the card**, keep **Install / update MGR-GB OS when writing to the card** enabled and write. The app prepares the indexes and compatible OS together; replacing only `GBOS.GB` is not enough.
+
+Validation: 4,234 files checked with paths and contents preserved, 98 automated tests, PT/EN emulator checks and the executable self-test. The user confirmed the version works; not every title was played.
+
 ## What MGR-GB OS brings
 
 | | |
@@ -43,13 +54,13 @@ A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
 With the card in your PC:
 
-1. **identifies each ROM by content** (CRC32 against the No-Intro database), also reads ROMs inside `.zip` files and picks the good copies;
+1. **identifies each ROM by content** (CRC32 against the No-Intro database), also reads ROMs inside `.zip` files and keeps all copies in the default preservation mode;
 2. **downloads the cover and the cheats** by official name and converts the cover to the console format on your computer;
 3. lets you check the list: **upload your own cover**, **choose another one** (with a preview of how the console shows it), upload your own `.cht`, edit the name on the card and include or leave out games;
 4. shows the **plan file by file** and only writes after your "yes";
 5. installs **MGR-GB OS** and writes the themes you edited;
-6. puts the folders in **alphabetical order** (the menu lists games in the card's order);
-7. if the card **already has games**, the **Read games from the card** button reads every root folder without touching the files and only adds covers, cheats, preview and the menu.
+6. optionally puts the folders in **alphabetical order** (the menu lists games in the card's order);
+7. if the card **already has games**, the **Read games from the card** button reads all folders and subfolders without touching the files and only adds covers, cheats, preview and the menu.
 
 The app works in **Portuguese or English** (Idioma / Language menu), and the console menu comes out in the same language: switch the language and just write again (the program tells you the card's menu is in another language). **Nothing is deleted from the card:** whatever is replaced goes to a backup folder, and every file is verified after writing.
 
@@ -61,7 +72,7 @@ The app works in **Portuguese or English** (Idioma / Language menu), and the con
 
 1. Download **`MGR-GB-OS-Gerenciador.exe`** from the **[Releases](../../releases)** page (a single file, no installation).
 2. Put the EverDrive's card in your PC, formatted as **FAT32**.
-3. Open `MGR-GB-OS-Gerenciador.exe`, pick the folder with your ROMs on **Game Boy** and **Game Boy Color**, and click **Read folder and prepare**.
+3. Open `MGR-GB-OS-Gerenciador.exe`, pick the root folder of your ROM collection in **Keep original folders and names** mode, and click **Read folder and prepare**.
 4. On **Write to the card**, pick the drive and click **Write to the card…**, check the plan and confirm.
 5. Use **Safely remove** in Windows, put the card in the EverDrive and turn the console on.
 

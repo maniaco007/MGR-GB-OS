@@ -16,6 +16,17 @@ Um projeto **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 *O cartucho usado nos testes.*
 
+## Novidades da 1.0.1
+
+- **Pastas e subpastas preservadas:** lê coleções como `Roms/Game Boy/GB US/` e mantém os nomes, as revisões e todas as cópias em seus caminhos originais. Uma origem mista preenche as páginas GB e GBC de uma vez.
+- **Capas e cheats da versão correta:** conteúdos diferentes, como original e hack com o mesmo cabeçalho, recebem chaves separadas. A prévia considera o nome completo dentro de cada pasta.
+- **Coleções grandes:** índices por pasta, leitura mesmo com fragmentação do cartão e busca de capas/cheats além das primeiras 1.024 entradas. Dispositivo conta os jogos de todas as subpastas; Recentes guarda a chave correta dos extras.
+- **Preservação como padrão:** o modo inicial é **Manter pastas e nomes originais**; a reordenação é opcional. Cheats sem capa disponível ganham a imagem do console para abrir a tela de códigos.
+
+**Atualizando um cartão existente:** escolha a raiz do cartão, clique em **Ler jogos do cartão**, mantenha **Instalar / atualizar o MGR-GB OS ao gravar no cartão** marcado e grave. O app prepara os índices e o OS compatível juntos; trocar somente `GBOS.GB` não basta.
+
+Validação: 4.234 arquivos conferidos com caminhos e conteúdos preservados, 98 testes automatizados, emulador PT/EN e autoteste do executável. Funcionamento da versão confirmado pelo usuário; não foram jogados todos os títulos.
+
 ## O que o MGR-GB OS traz
 
 | | |
@@ -43,13 +54,13 @@ Um projeto **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 Com o cartão no PC:
 
-1. **identifica cada ROM pelo conteúdo** (CRC32 contra o banco No-Intro), lê também ROMs dentro de `.zip` e escolhe as boas cópias;
+1. **identifica cada ROM pelo conteúdo** (CRC32 contra o banco No-Intro), lê também ROMs dentro de `.zip` e mantém todas as cópias no modo padrão de preservação;
 2. **baixa a capa e os cheats** pelo nome oficial e converte a capa para o formato do console, no seu computador;
 3. deixa você conferir a lista: **enviar a sua capa**, **escolher outra** (com prévia de como o console a mostra), enviar o seu `.cht`, editar o nome no cartão e incluir ou tirar jogos;
 4. mostra o **plano arquivo por arquivo** e só grava depois do seu "sim";
 5. instala o **MGR-GB OS** e grava os temas que você editou;
-6. deixa as pastas em **ordem alfabética** (o menu mostra os jogos na ordem do cartão);
-7. se o cartão **já tem jogos**, o botão **Ler jogos do cartão** lê todas as pastas da raiz sem mexer nos arquivos e só acrescenta capas, cheats, prévia e o menu.
+6. permite deixar as pastas em **ordem alfabética**, se você escolher (o menu mostra os jogos na ordem do cartão);
+7. se o cartão **já tem jogos**, o botão **Ler jogos do cartão** lê todas as pastas e subpastas sem mexer nos arquivos e só acrescenta capas, cheats, prévia e o menu.
 
 O aplicativo funciona em **português ou inglês** (menu Idioma / Language), e o menu do console sai no mesmo idioma: trocou o idioma, é só gravar de novo (o programa avisa que o menu do cartão está em outro idioma). **Nada é apagado do cartão:** o que é substituído vai para uma pasta de backup, e cada arquivo é conferido depois de gravado.
 
@@ -61,7 +72,7 @@ O aplicativo funciona em **português ou inglês** (menu Idioma / Language), e o
 
 1. Baixe o **`MGR-GB-OS-Gerenciador.exe`** na página de **[Releases](../../releases)** (um arquivo só, sem instalar).
 2. Coloque o cartão do EverDrive no PC, formatado em **FAT32**.
-3. Abra `MGR-GB-OS-Gerenciador.exe`, escolha a pasta das suas ROMs em **Game Boy** e **Game Boy Color** e clique em **Ler pasta e preparar**.
+3. Abra `MGR-GB-OS-Gerenciador.exe`, escolha a pasta principal da coleção no modo **Manter pastas e nomes originais** e clique em **Ler pasta e preparar**.
 4. Em **Gravar no cartão**, escolha a unidade e clique em **Gravar no cartão…**, confira o plano e confirme.
 5. Use **Remover com segurança** no Windows, coloque o cartão no EverDrive e ligue o console.
 
