@@ -13,7 +13,7 @@ This manual shows, screen by screen, how to prepare the card with **MGR-GB OS ·
 
 ## 2. Opening the program
 
-Open **`MGR-GB-OS-Gerenciador.exe`** (a single file, no installation). The top menu has **File**, **Theme** (the program's look), **Idioma / Language** (Portuguese or English) and **Help**. On the left are the five pages: **Game Boy**, **Game Boy Color**, **Theme**, **System** and **Write to the card**.
+Open **`MGR-GB-OS-Gerenciador.exe`** (a single file, no installation). The top menu has **File**, **Theme** (the program's look), **Idioma / Language** (Portuguese or English; the menu the program writes to the card follows that language) and **Help**. On the left are the five pages: **Game Boy**, **Game Boy Color**, **Theme**, **System** and **Write to the card**.
 
 **Updates:** on startup the program checks the GitHub Releases; if a newer version exists, a notice appears in the side bar with what is new and a **Download and update** button. It verifies the SHA-256, keeps the current `.exe` as `.exe.anterior` and reopens already updated. You can turn the check off in **Help > Check when the program starts** or check right away in **Help > Check for updates…**.
 

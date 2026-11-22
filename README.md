@@ -23,7 +23,7 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 | ![Capa colorida do jogo](imagens/menu-capa.png) | ![Lista de cheats do jogo](imagens/menu-cheats.png) |
 | ![Menu SELECT](imagens/menu-menu.png) | ![Seis temas](imagens/menu-temas.png) |
 
-- **Menu inteiro em português**, com acentos (á, ã, ç, é…).
+- **Menu inteiro em português**, com acentos (á, ã, ç, é…), ou **em inglês**: o menu que vai para o cartão acompanha o idioma do aplicativo.
 - **Prévia na lista:** ao lado do nome aparece a capa pequena do jogo, o tamanho da ROM, se tem **bateria**, **RTC** ou **SGB** e quantos **cheats** existem.
 - **Capa grande colorida:** **B** no jogo abre a capa em tela cheia, com cerca de 600 cores (o menu troca as cores do console linha a linha). **B** de novo inicia o jogo.
 - **Cheats por jogo, com descrição:** **START** na capa abre a lista; **B** liga e desliga cada código (Game Genie, até 28 por jogo) e o menu os aplica ao iniciar o jogo.
@@ -51,7 +51,7 @@ Com o cartão no PC:
 6. deixa as pastas em **ordem alfabética** (o menu mostra os jogos na ordem do cartão);
 7. se o cartão **já tem jogos**, o botão **Ler jogos do cartão** lê todas as pastas da raiz sem mexer nos arquivos e só acrescenta capas, cheats, prévia e o menu.
 
-O aplicativo funciona em **português ou inglês** (menu Idioma / Language). **Nada é apagado do cartão:** o que é substituído vai para uma pasta de backup, e cada arquivo é conferido depois de gravado.
+O aplicativo funciona em **português ou inglês** (menu Idioma / Language), e o menu do console sai no mesmo idioma: trocou o idioma, é só gravar de novo (o programa avisa que o menu do cartão está em outro idioma). **Nada é apagado do cartão:** o que é substituído vai para uma pasta de backup, e cada arquivo é conferido depois de gravado.
 
 | | |
 |---|---|

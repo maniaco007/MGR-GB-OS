@@ -13,7 +13,7 @@ Este manual mostra, tela por tela, como preparar o cartão com o **MGR-GB OS · 
 
 ## 2. Abrindo o programa
 
-Abra **`MGR-GB-OS-Gerenciador.exe`** (um arquivo só, não precisa instalar). O menu do topo tem **Arquivo**, **Tema** (aparência do programa), **Idioma / Language** (português ou English) e **Ajuda**. À esquerda ficam as cinco páginas: **Game Boy**, **Game Boy Color**, **Tema**, **Sistema** e **Gravar no cartão**.
+Abra **`MGR-GB-OS-Gerenciador.exe`** (um arquivo só, não precisa instalar). O menu do topo tem **Arquivo**, **Tema** (aparência do programa), **Idioma / Language** (português ou English; o menu que o programa grava no cartão acompanha esse idioma) e **Ajuda**. À esquerda ficam as cinco páginas: **Game Boy**, **Game Boy Color**, **Tema**, **Sistema** e **Gravar no cartão**.
 
 **Atualizações:** ao abrir, o programa consulta as Releases do GitHub; se houver versão mais nova, aparece um aviso na barra lateral com as novidades e o botão **Baixar e atualizar**. Ele confere o SHA-256, guarda o `.exe` atual como `.exe.anterior` e reabre já atualizado. Dá para desligar a consulta em **Ajuda > Verificar ao abrir o programa** ou consultar na hora em **Ajuda > Verificar atualizações…**.
 

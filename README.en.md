@@ -23,7 +23,7 @@ A project of the **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** bl
 | ![Color game cover](imagens/menu-capa.png) | ![Game cheat list](imagens/menu-cheats.png) |
 | ![SELECT menu](imagens/menu-menu.png) | ![Six themes](imagens/menu-temas.png) |
 
-- **The whole menu in Portuguese**, with accented characters (á, ã, ç, é…).
+- **The whole menu in Portuguese** (with accented characters á, ã, ç, é…) **or in English**: the menu written to the card follows the app's language.
 - **Preview in the list:** beside the name you see the game's small cover, the ROM size, whether it has **battery**, **RTC** or **SGB**, and how many **cheats** exist.
 - **Large color cover:** **B** on a game opens the cover full screen, with about 600 colors (the menu changes the console's colors line by line). **B** again starts the game.
 - **Per-game cheats, with descriptions:** **START** on the cover opens the list; **B** toggles each code (Game Genie, up to 28 per game) and the menu applies them when the game starts.
@@ -51,7 +51,7 @@ With the card in your PC:
 6. puts the folders in **alphabetical order** (the menu lists games in the card's order);
 7. if the card **already has games**, the **Read games from the card** button reads every root folder without touching the files and only adds covers, cheats, preview and the menu.
 
-The app works in **Portuguese or English** (Idioma / Language menu). **Nothing is deleted from the card:** whatever is replaced goes to a backup folder, and every file is verified after writing.
+The app works in **Portuguese or English** (Idioma / Language menu), and the console menu comes out in the same language: switch the language and just write again (the program tells you the card's menu is in another language). **Nothing is deleted from the card:** whatever is replaced goes to a backup folder, and every file is verified after writing.
 
 | | |
 |---|---|
