@@ -13,7 +13,9 @@ This manual shows, screen by screen, how to prepare the card with **MGR-GB OS ·
 
 ## 2. Opening the program
 
-Extract the whole folder from the `.zip` and open **`MGR-GB-OS-Gerenciador.exe`** (keep the `_internal` folder next to it). The top menu has **File**, **Theme** (the program's look), **Idioma / Language** (Portuguese or English) and **Help**. On the left are the five pages: **Game Boy**, **Game Boy Color**, **Theme**, **System** and **Write to the card**.
+Open **`MGR-GB-OS-Gerenciador.exe`** (a single file, no installation). The top menu has **File**, **Theme** (the program's look), **Idioma / Language** (Portuguese or English) and **Help**. On the left are the five pages: **Game Boy**, **Game Boy Color**, **Theme**, **System** and **Write to the card**.
+
+**Updates:** on startup the program checks the GitHub Releases; if a newer version exists, a notice appears in the side bar with what is new and a **Download and update** button. It verifies the SHA-256, keeps the current `.exe` as `.exe.anterior` and reopens already updated. You can turn the check off in **Help > Check when the program starts** or check right away in **Help > Check for updates…**.
 
 ## 3. The Game Boy and Game Boy Color pages
 
@@ -35,6 +37,10 @@ Extract the whole folder from the `.zip` and open **`MGR-GB-OS-Gerenciador.exe`*
 ![Game Boy Color page](imagens/app-gbc-en.png)
 
 The **Game Boy Color** page is the same, for `.gbc` games. **File > Save project** keeps the list in a `.mgrgb.json` (it points to your ROMs, it does not embed them).
+
+### A card that already has games
+
+If the card is already full, use **Read games from the card** (on the Game Boy and Game Boy Color pages). The program reads the ROMs of **every root folder** (except `EDGB`, `COVERS` and `CHEATS`; not `.zip`), splits Game Boy and Game Boy Color by the header, **keeps each game where it is, unrenamed**, and downloads covers and cheats. Then **Write to the card** only adds covers, cheats, the preview and the menu. Folders with their own names also get the console image and go into alphabetical order. On a large library the first cover conversion takes a while (thousands of covers take about an hour with the improved converter; the **Standard** converter is much faster).
 
 ### Choose another cover
 

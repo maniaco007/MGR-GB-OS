@@ -10,6 +10,10 @@ Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 > **Testado em hardware real:** Game Boy Color com o cartucho **EverDrive GB Extreme** (placa EXTREME REV.E, microSD em FAT32). Veja [O que foi testado](#o-que-foi-testado).
 
+<img src="imagens/cartucho-testado.png" alt="Cartucho EverDrive GB Extreme usado nos testes" width="280">
+
+*O cartucho usado nos testes.*
+
 ## O que o MGR-GB OS traz
 
 | | |
@@ -42,7 +46,8 @@ Com o cartão no PC:
 3. deixa você conferir a lista: **enviar a sua capa**, **escolher outra** (com prévia de como o console a mostra), enviar o seu `.cht`, editar o nome no cartão e incluir ou tirar jogos;
 4. mostra o **plano arquivo por arquivo** e só grava depois do seu "sim";
 5. instala o **MGR-GB OS** e grava os temas que você editou;
-6. deixa as pastas em **ordem alfabética** (o menu mostra os jogos na ordem do cartão).
+6. deixa as pastas em **ordem alfabética** (o menu mostra os jogos na ordem do cartão);
+7. se o cartão **já tem jogos**, o botão **Ler jogos do cartão** lê todas as pastas da raiz sem mexer nos arquivos e só acrescenta capas, cheats, prévia e o menu.
 
 O aplicativo funciona em **português ou inglês** (menu Idioma / Language). **Nada é apagado do cartão:** o que é substituído vai para uma pasta de backup, e cada arquivo é conferido depois de gravado.
 
@@ -52,11 +57,13 @@ O aplicativo funciona em **português ou inglês** (menu Idioma / Language). **N
 
 ## Como usar
 
-1. Baixe o **`MGR-GB-OS-Gerenciador-0.1.0.zip`** na página de **[Releases](../../releases)** e extraia a pasta inteira (mantenha `_internal` ao lado do `.exe`).
+1. Baixe o **`MGR-GB-OS-Gerenciador.exe`** na página de **[Releases](../../releases)** (um arquivo só, sem instalar).
 2. Coloque o cartão do EverDrive no PC, formatado em **FAT32**.
 3. Abra `MGR-GB-OS-Gerenciador.exe`, escolha a pasta das suas ROMs em **Game Boy** e **Game Boy Color** e clique em **Ler pasta e preparar**.
 4. Em **Gravar no cartão**, escolha a unidade e clique em **Gravar no cartão…**, confira o plano e confirme.
 5. Use **Remover com segurança** no Windows, coloque o cartão no EverDrive e ligue o console.
+
+O aplicativo **se atualiza sozinho**: ao abrir, avisa se há versão nova nas Releases e troca o `.exe` com um clique (Ajuda > Verificar atualizações…).
 
 Passo a passo completo, com todas as telas: **[Manual](MANUAL.md)**.
 
@@ -74,6 +81,7 @@ Passo a passo completo, com todas as telas: **[Manual](MANUAL.md)**.
 |---|---|
 | Gravação do cartão pelo aplicativo (jogos, capas, cheats, prévia, menu) e lista com a prévia | **Game Boy Color + EverDrive GB Extreme**, cartão FAT32 |
 | Ordem alfabética dentro das pastas e das duas pastas da raiz | **Game Boy Color + EverDrive GB Extreme**, cartão FAT32 |
+| Voltar com **A** na lista sem “lixo de caracteres” na prévia (correção do menu) | **Game Boy Color + EverDrive GB Extreme** |
 | Temas editados pelo aplicativo, aplicação dos cheats ao iniciar o jogo, capas convertidas pelo conversor melhorado | **Só no emulador** do projeto; aguardando conferência no console |
 | Game Boy sem cores (DMG), outros modelos de EverDrive GB | Não testado |
 

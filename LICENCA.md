@@ -24,7 +24,7 @@
 
 ## Componentes de terceiros / Third-party components
 
-O pacote do Programa inclui / The Program's package includes:
+O `.exe` do Programa inclui / The Program's `.exe` includes:
 
 | Componente | Licença |
 |---|---|
@@ -32,7 +32,6 @@ O pacote do Programa inclui / The Program's package includes:
 | Tcl/Tk (tkinter) | BSD-style (Tcl/Tk license) |
 | Pillow | MIT-CMU (HPND) |
 | NumPy | BSD 3-Clause |
-| PyYAML, charset-normalizer | MIT |
-| PyInstaller (bootloader) | GPL-2.0 com exceção de carregador / with bootloader exception |
+| Nuitka (runtime do `.exe` / the `.exe` runtime) | Nuitka Runtime Library Exception |
 
 Os textos completos dessas licenças estão em [TERCEIROS.md](TERCEIROS.md). / The full texts are in [TERCEIROS.md](TERCEIROS.md).

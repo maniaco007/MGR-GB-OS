@@ -13,7 +13,9 @@ Este manual mostra, tela por tela, como preparar o cartão com o **MGR-GB OS · 
 
 ## 2. Abrindo o programa
 
-Extraia a pasta inteira do `.zip` e abra **`MGR-GB-OS-Gerenciador.exe`** (mantenha a pasta `_internal` ao lado). O menu do topo tem **Arquivo**, **Tema** (aparência do programa), **Idioma / Language** (português ou English) e **Ajuda**. À esquerda ficam as cinco páginas: **Game Boy**, **Game Boy Color**, **Tema**, **Sistema** e **Gravar no cartão**.
+Abra **`MGR-GB-OS-Gerenciador.exe`** (um arquivo só, não precisa instalar). O menu do topo tem **Arquivo**, **Tema** (aparência do programa), **Idioma / Language** (português ou English) e **Ajuda**. À esquerda ficam as cinco páginas: **Game Boy**, **Game Boy Color**, **Tema**, **Sistema** e **Gravar no cartão**.
+
+**Atualizações:** ao abrir, o programa consulta as Releases do GitHub; se houver versão mais nova, aparece um aviso na barra lateral com as novidades e o botão **Baixar e atualizar**. Ele confere o SHA-256, guarda o `.exe` atual como `.exe.anterior` e reabre já atualizado. Dá para desligar a consulta em **Ajuda > Verificar ao abrir o programa** ou consultar na hora em **Ajuda > Verificar atualizações…**.
 
 ## 3. As páginas Game Boy e Game Boy Color
 
@@ -35,6 +37,10 @@ Extraia a pasta inteira do `.zip` e abra **`MGR-GB-OS-Gerenciador.exe`** (manten
 ![Página Game Boy Color](imagens/app-gbc.png)
 
 A página **Game Boy Color** é igual, para os jogos `.gbc`. **Arquivo > Salvar projeto** guarda a lista num `.mgrgb.json` (ele aponta para as suas ROMs, não as incorpora).
+
+### Cartão que já tem jogos
+
+Se o cartão já está cheio, use **Ler jogos do cartão** (nas páginas Game Boy e Game Boy Color). O programa lê as ROMs de **todas as pastas da raiz** (menos `EDGB`, `COVERS` e `CHEATS`; `.zip` não), separa Game Boy e Game Boy Color pelo cabeçalho, **mantém cada jogo onde está e sem renomear**, e baixa as capas e os cheats. Depois, **Gravar no cartão** só acrescenta capas, cheats, a prévia e o menu. As pastas com nome próprio também ganham a imagem do console e entram na ordem alfabética. Numa biblioteca grande a primeira conversão das capas demora (milhares de capas levam cerca de uma hora no conversor melhorado; o conversor **Padrão** é bem mais rápido).
 
 ### Escolher outra capa
 
