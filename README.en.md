@@ -4,7 +4,7 @@
 
 **A Brazilian Portuguese menu for the EverDrive GB, with a color cover for every game, a preview in the list, ready-made cheats and themes — plus a Windows app that gets the SD card ready in a few clicks.**
 
-A project of the **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** blog.
+A **[Maniaco Game Room](https://www.maniacogameroom.com.br/)** project.
 
 ![Game list with the cover preview, on a real Game Boy Color](imagens/menu-lista-capa-console.jpg)
 

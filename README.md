@@ -4,7 +4,7 @@
 
 **Menu do EverDrive GB em português, com a capa colorida de cada jogo, prévia na lista, cheats prontos e temas — e um aplicativo para Windows que deixa o cartão SD pronto em poucos cliques.**
 
-Um projeto do blog **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
+Um projeto **[Maniaco Game Room](https://www.maniacogameroom.com.br/)**.
 
 ![Lista de jogos com a prévia da capa, no Game Boy Color real](imagens/menu-lista-capa-console.jpg)
 
