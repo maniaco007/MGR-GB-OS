@@ -84,7 +84,6 @@ Full step by step, with every screen: **[Manual](MANUAL.en.md)**.
 | Writing the card with the app (games, covers, cheats, preview, menu) and the list with the preview | **Game Boy Color + EverDrive GB Extreme**, FAT32 card |
 | Alphabetical order inside the folders and of the two root folders | **Game Boy Color + EverDrive GB Extreme**, FAT32 card |
 | Going back with **A** in the list without “garbage characters” in the preview (menu fix) | **Game Boy Color + EverDrive GB Extreme** |
-| Themes edited in the app, cheats applied when the game starts, covers converted by the improved converter | **Emulator only** (the project's own); awaiting a check on the console |
 | Plain Game Boy (DMG), other EverDrive GB models | Not tested |
 
 The photo of the game list (at the top) is from the **real console**. The other screens were generated in the **project's own emulator** (which runs the real menu), with ROMs cut down just for the list; they are not photos of the console.

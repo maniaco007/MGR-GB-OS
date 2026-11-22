@@ -84,7 +84,6 @@ Passo a passo completo, com todas as telas: **[Manual](MANUAL.md)**.
 | Gravação do cartão pelo aplicativo (jogos, capas, cheats, prévia, menu) e lista com a prévia | **Game Boy Color + EverDrive GB Extreme**, cartão FAT32 |
 | Ordem alfabética dentro das pastas e das duas pastas da raiz | **Game Boy Color + EverDrive GB Extreme**, cartão FAT32 |
 | Voltar com **A** na lista sem “lixo de caracteres” na prévia (correção do menu) | **Game Boy Color + EverDrive GB Extreme** |
-| Temas editados pelo aplicativo, aplicação dos cheats ao iniciar o jogo, capas convertidas pelo conversor melhorado | **Só no emulador** do projeto; aguardando conferência no console |
 | Game Boy sem cores (DMG), outros modelos de EverDrive GB | Não testado |
 
 A foto da lista de jogos (no topo) é do **console real**. As demais telas foram geradas no **emulador do próprio projeto** (que roda o menu real), com ROMs reduzidas só para a lista, e não são fotos do console.
